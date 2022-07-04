@@ -159,7 +159,7 @@ func add(n1:Int,n2:Int)->Int {
 //vai aparecer no print 5
 print(result(n1:2,n2:3,operation: add))
 
-
+//vai printar 6
 let total = result(n1:2,n2:3){$0 * $1}
 print(total)
 
