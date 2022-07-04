@@ -4,5 +4,6 @@
         <page name='struct'/>
         <page name='class'/>
         <page name='protocols'/>
+        <page name='closure'/>
     </pages>
 </playground>
