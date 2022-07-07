@@ -131,7 +131,46 @@ struct Hen: BirdProtocol {
 
 
 ```
+##
+- Aprendi o uso de closure no swift
+- Swift consigo receber os argumentos nos closure por $ idêntico e feito em bash,C
+- Caso deseja saber como e feito com shell usando [bash](https://github.com/kenjimaeda54/shell_script)
+- Abaixo estou mostrando maneira de escrever closure bem reduzida é a forma comum
+- Você só consegue acessar os valores por $ se omitir o escopo de argumentos (argumentos)
 
+
+```swift
+//closure na forma padrao e escrito dessa maneira
+//}
+{(parametres) -> return type in
+  statements
+}
+
+
+
+
+func result (n1:Int,n2:Int,operation:(Int,Int)->Int) -> Int {
+    return operation(n1,n2)
+}
+
+func add(n1:Int,n2:Int)->Int {
+    return n1 + n2
+}
+//vai aparecer no print 5
+print(result(n1:2,n2:3,operation: add))
+
+//vai printar 6
+let total = result(n1:2,n2:3){$0 * $1}
+print(total)
+
+//vai printar 10
+//se otimitir os argumetnos consigo acessar por $
+let novo  = {print($0)}
+novo(10)
+
+
+
+```
 
 
 
