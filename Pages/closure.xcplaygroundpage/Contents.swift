@@ -26,3 +26,26 @@ print(result(n1:2,n2:3,operation: add))
 //abaixo uma maneira bem resumida
 let total = result(n1:2,n2:3){$0 * $1}
 print(total)
+
+struct User {
+    let altura: Double
+    let name: String
+    
+    init(altura: Double,name: String) {
+        self.altura = altura
+        self.name = name
+    }
+}
+
+var user1 = User(altura:1.68,name: "Ricardo")
+var user2 = User(altura:1.20,name: "Erika")
+
+
+let allUser = [user1,user2]
+
+allUser.map({
+    print("Eu me chamo \($0.name) e tenho \($0.altura)m")
+})
+
+let novo  = {print($0)}
+novo(10)
