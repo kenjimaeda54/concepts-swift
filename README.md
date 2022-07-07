@@ -171,6 +171,36 @@ novo(10)
 
 
 ```
+##
+- Extension são funcionalidades que permitem nos estendermos funcionalidades de algo que esta pronto como: classe, protocolos, objetos, dados primitivos,
+- Abaixo um exemplo de uso [extensions](https://docs.swift.org/swift-book/LanguageGuide/Extensions.html)
+
+```swift
+
+protocol Travel {
+    func allPay()
+}
+
+extension Travel {
+    func isOk() {
+      print("Permission for travel is sucess")
+    }
+}
+
+class UserTravel: Travel {
+    func allPay() {
+        print("Need all is pay for travel")
+    }
+    
+}
+
+var userTravel = UserTravel()
+userTravel.allPay()
+userTravel.isOk()
+
+
+```
+
 
 
 
