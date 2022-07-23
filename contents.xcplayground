@@ -7,5 +7,6 @@
         <page name='closure'/>
         <page name='extension'/>
         <page name='array'/>
+        <page name='dictionary'/>
     </pages>
 </playground>
