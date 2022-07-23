@@ -231,7 +231,7 @@ print(arrayNames)
 //inserir no final
 arrayNames.append("Carlos")
 
-//inserir e remover elementos existes
+//inserir e remover elementos existentes
 //estou removendo do 2 ate o 4
 arrayNames[2...4] = ["Rafael","Matheus","Erika"]
 print(arrayNames)
@@ -249,7 +249,7 @@ print(arrayNames)
 //verificar se o array esta vazio e quantos elementos
 print(arrayNames.count)
 
-//returna true ou false
+//retorna true ou false
 print(arrayNames.isEmpty)
 //======================
 
@@ -260,14 +260,14 @@ arrayNames.removeLast()
 arrayNames.removeAll()
 //====================
 
-//verficar se elmento contem
+//verificar se elemento contem
 if arrayNames.contains("Rafael") {
 	print("contem rafael")
 }
 
 //================
-// verificar o ultimo elmento e o primerio
-//ele retorna um optionl
+// verificar o último elemento e o primeiro
+//ele retorna um optional
 
 if let first = arrayNames.first {
 	print(first)
