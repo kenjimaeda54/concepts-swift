@@ -10,5 +10,6 @@
         <page name='dictionary'/>
         <page name='set-tuplas'/>
         <page name='Enum'/>
+        <page name='function'/>
     </pages>
 </playground>
