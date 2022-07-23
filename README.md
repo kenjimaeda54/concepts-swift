@@ -39,10 +39,10 @@ struct User {
 ```
 
 - Em struct também existem observadores de variáveis, elas são uteis para inibirmos que nossas variáveis assumem um valor não desejado, no exemplo abaixo travamos o mínimo e o máximo desejado dessa variável.
--  Exite também a possibilidade de variáveis computadas e  instanciar um método, sem instanciar o objeto.
+- Exite também a possibilidade de variáveis computadas e  instanciar um método, sem instanciar o objeto.
 - Dentro das variáveis computadas tenho a possibilidade da palavra reservada get e setter
-- Get eu retorno um valor e set eu manipulo um valor, este novo valor ficara armazenado na palavra reservada newValue
-- No caso do get e setter quem fica armazenado o novo valor, sera  variável  computada ou seja newDistrict
+- Get eu retorno um valor e set  manipulo, este novo valor manipulado fica presente na palavra reservada newValue
+- No caso do get e setter toda logica fica na variável computada, então sera  variável  computada ou seja newDistrict
 - Em classes os métodos estáticos usaram a palavra reservada class em struct static
 
 ```swift
