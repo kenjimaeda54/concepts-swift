@@ -13,5 +13,6 @@
         <page name='function'/>
         <page name='try-catch'/>
         <page name='custom-operator'/>
+        <page name='generic-subscript'/>
     </pages>
 </playground>
