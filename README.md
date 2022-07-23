@@ -201,6 +201,85 @@ userTravel.isOk()
 
 ```
 
+##
+- Aprendi iniciar um array vazio e sem valor
+- Variáveis sem valores são considerados nill
+- Para iniciar uma variável sem valor usamos optional
+- Aprendi maneiras interessantes adicionar valores, deletar, inserir e consultar nos arrays
+
+
+
+```swift
+import Foundation
+
+//maneira de iniciar um array vazio
+let arrayWithoutEmpty: [Int] = []
+
+//maneira de iniciar um array sem valor
+let arrayWithoutValue: [Int]?
+
+var arrayNames = ["Ana","Pedro"]
+
+//===========================
+//para inserir valores
+
+//sera inserido no final 3 novos nomes
+arrayNames += ["Pedro","Joao","Carlos"]
+print(arrayNames)
+//["Ana", "Pedro", "Pedro", "Joao", "Carlos"]
+
+//inserir no final
+arrayNames.append("Carlos")
+
+//inserir e remover elementos existentes
+//estou removendo do 2 ate o 4
+arrayNames[2...4] = ["Rafael","Matheus","Erika"]
+print(arrayNames)
+//["Ana", "Pedro", "Rafael", "Matheus", "Erka", "Carlos"]
+
+//inserir em um determinado lugar
+arrayNames.insert("Novo elemento", at: 3)
+print(arrayNames)
+//["Ana", "Pedro", "Rafael", "Novo elemento", "Matheus", "Erika", "Carlos"]
+
+//===========================
+
+
+//======================
+//verificar se o array esta vazio e quantos elementos
+print(arrayNames.count)
+
+//retorna true ou false
+print(arrayNames.isEmpty)
+//======================
+
+//======================
+//deletar elementos
+arrayNames.removeFirst()
+arrayNames.removeLast()
+arrayNames.removeAll()
+//====================
+
+//verificar se elemento contem
+if arrayNames.contains("Rafael") {
+	print("contem rafael")
+}
+
+//================
+// verificar o último elemento e o primeiro
+//ele retorna um optional
+
+if let first = arrayNames.first {
+	print(first)
+}
+
+if let last = arrayNames.last {
+	print(last)
+}
+//================
+
+
+```
 
 
 
