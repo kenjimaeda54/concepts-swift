@@ -286,8 +286,6 @@ if let last = arrayNames.last {
 
 
 ```swift
-//: [Previous](@previous)
-
 import Foundation
 
 var states = ["SP":"Sao Paulo","BH":"Bahia","MG":"Minas Gerais"]
