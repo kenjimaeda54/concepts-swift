@@ -6,5 +6,6 @@
         <page name='protocols'/>
         <page name='closure'/>
         <page name='extension'/>
+        <page name='array'/>
     </pages>
 </playground>

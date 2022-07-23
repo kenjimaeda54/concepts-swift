@@ -25,3 +25,12 @@ class UserTravel: Travel {
 var userTravel = UserTravel()
 userTravel.allPay()
 userTravel.isOk()
+
+
+let arrayTop = ["banana","pera","joao"]
+
+
+arrayTop.forEach({
+	print($0)
+})
+
