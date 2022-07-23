@@ -286,8 +286,6 @@ if let last = arrayNames.last {
 
 
 ```swift
-//: [Previous](@previous)
-
 import Foundation
 
 var states = ["SP":"Sao Paulo","BH":"Bahia","MG":"Minas Gerais"]
@@ -340,6 +338,75 @@ print(keys)
 //===========
 
 ```
+##
+- Aprendi o uso de tuplas e set
+- Não consigo acessar set por índices preciso inteirar sobre eles
+- Set não permite valores iguais e precisamos inferir o seu tipo, porque xcode não consegue fazer de forma automática
+- Aprendi unir, subtrair e fazer interseção com tuplas
+- Set e algo bacana, com ele conseguimos atribuir variáveis aos seus tipos e acessar com elas
+- Consigo com método insert, receber uma tupla, um das propriedades dessa tupla e se o valor foi realmente inserido ou não
+
+```swift
+import Foundation
+
+
+var movies: Set<String> = [
+  "De volta para casa",
+	"Matriz",
+	"Jurasic Park"
+]
+
+//iniciar vazio
+var movies2 = Set<String>()
+
+//inserir valores
+movies.insert("Pedro o joao")
+print(movies)
+
+//metodo insert retorna uma tupla,primeira propriedade e bolleano
+//segundo e valor que foi inserido
+let result = movies.insert("Pedro o joao")
+//false Pedro o Joao
+print(result.inserted,result.memberAfterInsert)
+print(movies.count)
+
+let moviesWife = [
+	"Sabio de tudo",
+	"Matriz",
+	"Jurasic Park",
+	"De repente"
+]
+
+//oque e comum em ambos
+let favoriteMoveis = movies.intersection(moviesWife)
+//["Matriz", "Jurasic Park"]
+print(favoriteMoveis)
+
+//unindo todos set
+let allMovies = movies.union(moviesWife)
+//["De repente", "Matriz", "Pedro o joao","Sabio de tudo", "Jurasic Park", "De volta para casa"]
+print(allMovies)
+
+//retiro de movies oque tem em comun nos dois set
+movies = movies.subtracting(moviesWife)
+//["De volta para casa", "Pedro o joao"]
+print(movies)
+
+
+//tupla
+//eu posso nomear os tipos das tuplas
+let address: (road:String,number: Int,district:String,zipCode: Int) = ("Silviano Brandao",1234,"Centro",23344)
+
+print(address.number)
+
+//posso atribuir variaveis
+let (road,_ ,district,code) = address
+print(road)
+
+```
+
+
+
 
 
 
