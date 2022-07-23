@@ -12,5 +12,6 @@
         <page name='Enum'/>
         <page name='function'/>
         <page name='try-catch'/>
+        <page name='custom-operator'/>
     </pages>
 </playground>

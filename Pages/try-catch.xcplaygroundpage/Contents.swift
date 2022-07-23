@@ -1,5 +1,5 @@
 import Foundation
-import Security
+
 
 //tratamento de erros
 
