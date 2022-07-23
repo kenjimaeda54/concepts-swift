@@ -8,5 +8,6 @@
         <page name='extension'/>
         <page name='array'/>
         <page name='dictionary'/>
+        <page name='set-tuplas'/>
     </pages>
 </playground>
