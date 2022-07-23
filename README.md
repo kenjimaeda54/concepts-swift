@@ -619,5 +619,51 @@ let userAuthenticated = try? login(name:"Joao",password: 123)
 print(userAuthenticated)
 
 ```
+##
+- Aprendi o uso dos meus próprios operadores customizados
+- Esse recurso possibilita criarmos nossos operadores Unários(operam somente em um operando), Binários(operam em 2 operando)
+- No caso dos Unários permitem usarmos prefix e postfix
+- Para usar emoji precisa ser na aba símbolos
+- Neste caso as funções não aceitam ranges, apenas um parâmetro ou seja String...  não e permitido
+
+
+```swift
+
+import Foundation
+//existem operadores
+
+//Unarios -> Operam somente em 1 operando
+//prefix -> esquerdo
+//postfix -> direito
+
+
+//Binarios -> Operam em 2 operando
+//infix
+
+//criando um prefix
+prefix operator ✅
+prefix func ✅(_ names: [String]) -> [String] {
+	return names.map({$0.uppercased()})
+}
+
+let names = ✅(["Ricardo","Maeda","Joao"])
+print(names)
+
+postfix operator ❤️
+postfix func  ❤️ (_ olds:[Int]) -> [Int] {
+	return olds.map({$0 * 2})
+}
+
+let olds  = [2,3,4,5]❤️
+print(olds)
+
+infix operator ‼️
+func  ‼️ (left: Int, right: Int) -> [Int] {
+	return Array(right...left).reversed()
+}
+
+print( 30‼️10 )
+
+```
 
 
