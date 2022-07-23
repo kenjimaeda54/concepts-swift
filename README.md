@@ -42,6 +42,7 @@ struct User {
 -  Exite também a possibilidade de variáveis computadas e  instanciar um método, sem instanciar o objeto.
 - Dentro das variáveis computadas tenho a possibilidade da palavra reservada get e setter
 - Get eu retorno um valor e set eu manipulo um valor, este novo valor ficara armazenado na palavra reservada newValue
+- No caso do get e setter quem fica armazenado o novo valor, sera  variável  computada ou seja newDistrict
 - Em classes os métodos estáticos usaram a palavra reservada class em struct static
 
 ```swift
