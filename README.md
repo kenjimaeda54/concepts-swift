@@ -38,6 +38,56 @@ struct User {
 
 ```
 
+- Em struct também existem observadores de variáveis, elas são uteis para inibirmos que nossas variáveis assumem um valor não desejado, no exemplo abaixo travamos o mínimo e o máximo desejado dessa variável.
+-  Exite também a possibilidade de variáveis computadas e  instanciar um método, sem instanciar o objeto.
+- Dentro das variáveis computadas tenho a possibilidade da palavra reservada get e setter
+- Get eu retorno um valor e set eu manipulo um valor, este novo valor ficara armazenado na palavra reservada newValue
+- Em classes os métodos estáticos usaram a palavra reservada class em struct static
+
+```swift
+struct City {
+	var district: String
+	static	var speed: Int = 0 {
+		didSet {
+			//aqui tenho o mino e o maximo
+			//isto e um observador de variavel, se ultrapassar o maximo
+			//variavel mantem o maximo
+			speed = min(speed, 250)
+		}
+	}
+	
+	var  newDistrict: String {
+		//getter e setter vai ser para manipular algo internto
+		get {
+			return "Com set meu novo bairro e \(district)"
+		}
+		//newValue e uma palavra reservada
+		set {
+			district = 	newValue
+		}
+	}
+	
+	static func alert() {
+		print("Minha cidade nao e permitida drogas")
+	}
+	
+}
+
+var district = City(district: "Alameida")
+//vai trazer Alameida
+print(district.district)
+
+//aqui  estou usando set,entao "Com set meu novo bairro e Perereia"
+district.newDistrict = "Perereia"
+print(district.district)
+
+City.alert()
+
+City.speed = 500
+print(City.speed)
+```
+
+
 ##
 - Para realizar herança colocamos ao lado do nome da classe a super classe
 - Essa clase herda tudos métodos e propriedades  da super classe
