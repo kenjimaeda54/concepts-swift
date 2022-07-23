@@ -3,9 +3,16 @@ Repo destinado a conceitos em swift
 
 ## Feature
 - Aprendi o uso de struct,class e protocols
-- Apple recomenda o uso fortemente de struct para seus dados, só uso de classes quando não for possível implementar struct ou precisar de algum recurso especifico de classes
-- Classes permitem herança, polimorfismo,sobre carga de métodos
-- Struct não permite nenhum dessas fature citado,struct pode iniciar uma propriedade vazia classes não
+- Apple recomenda o uso fortemente de struct para seus dados, só uso de classes quando não for possível implementar struct ou precisar de algum recurso especifico de classes</br>
+  
+  Diferenças de strcut e classes:
+- Classes permitem herança, polimorfismo, sobre carga de métodos
+- Struct não permite nenhum dessas fature citado
+- Struct pode iniciar uma propriedade vazia porque seu construtor e automático, classes não permitem
+- Struct os valores são passados por cópia ou seja Value Type
+- Classes os valores são passados por Reference Type
+- Ou seja em struct se uma variável receber essa struct ,ao alterar  struct inicial, não ira refletir na segunda, em classe sim
+- Por fim classes possem desconstrutores
 
 
 ```swift
