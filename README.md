@@ -50,7 +50,6 @@ struct City {
 	var district: String
 	static	var speed: Int = 0 {
 		didSet {
-			//aqui tenho o mino e o maximo
 			//isto e um observador de variavel, se ultrapassar o maximo
 			//variavel mantem o maximo
 			speed = min(speed, 250)
@@ -58,13 +57,12 @@ struct City {
 	}
 	
 	var  newDistrict: String {
-		//getter e setter vai ser para manipular algo internto
 		get {
-			return "Com set meu novo bairro e \(district)"
+			return "Valor do bairro \(district)"
 		}
-		//newValue e uma palavra reservada
+		//newValue e uma palavra reservada,que recebe novo valor
 		set {
-			district = 	newValue
+			district = newValue
 		}
 	}
 	
@@ -75,17 +73,20 @@ struct City {
 }
 
 var district = City(district: "Alameida")
-//vai trazer Alameida
-print(district.district)
+//Valor do bairro Alameida
+print(district.newDistrict)
 
-//aqui  estou usando set,entao "Com set meu novo bairro e Perereia"
+
 district.newDistrict = "Perereia"
-print(district.district)
+//Valor do bairro " Perereia"
+print(district.newDistrict)
 
 City.alert()
 
-City.speed = 500
+City.speed = 100
+//se for maior que 250,o valor sera 250.
 print(City.speed)
+
 ```
 
 
