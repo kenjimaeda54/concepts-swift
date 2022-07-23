@@ -11,5 +11,6 @@
         <page name='set-tuplas'/>
         <page name='Enum'/>
         <page name='function'/>
+        <page name='try-catch'/>
     </pages>
 </playground>

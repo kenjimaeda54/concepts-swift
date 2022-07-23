@@ -43,6 +43,8 @@ func div (valueOne: Int, valueTwo: Int) -> Int {
 
 typealias Op = (Int,Int) -> Int
 
+//==========================
+//aqui retorno o resultado de um func
 func result(valueOne: Int,valueTwo: Int,op: Op) -> Int {
 	return op(valueOne,valueTwo)
 }
@@ -51,7 +53,9 @@ let resultDivide = result(valueOne:20,valueTwo:10,op:div)
 //2
 print(resultDivide)
 
+//===============
 
+//==============
 //aqui atribuo uma funcao no retorno de outra
 func getOperation(_ operation:String) -> Op {
 	switch operation {
