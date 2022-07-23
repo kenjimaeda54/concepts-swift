@@ -347,8 +347,6 @@ print(keys)
 - Consigo com método insert, receber uma tupla, um das propriedades dessa tupla e se o valor foi realmente inserido ou não
 
 ```swift
-//: [Previous](@previous)
-
 import Foundation
 
 
