@@ -9,5 +9,6 @@
         <page name='array'/>
         <page name='dictionary'/>
         <page name='set-tuplas'/>
+        <page name='Enum'/>
     </pages>
 </playground>
