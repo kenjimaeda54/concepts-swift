@@ -451,8 +451,113 @@ case  .size(let size):
 
 
 ```
+##
+- Aprendi uso interessantes  em funções
+- Funções em swift são First Class Citizen
+- Isto permite recursos interessantes, abaixo criei uma função que recebe outra como parâmetro
+- Em conjunto usei typealias, possibilidade de criar apelidos, podem ser usados até em tipos primitivos
+
+```swift
+func sum (valueOne: Int, valueTwo: Int) -> Int {
+	 return valueOne + valueTwo
+}
+
+func multi (valueOne: Int, valueTwo: Int) -> Int {
+	 return valueOne * valueTwo
+}
+
+func div (valueOne: Int, valueTwo: Int) -> Int {
+	 return valueOne / valueTwo
+}
+
+typealias Op = (Int,Int) -> Int
 
 
+func result(valueOne: Int,valueTwo: Int,op: Op) -> Int {
+	return op(valueOne,valueTwo)
+}
+
+let resultDivide = result(valueOne:20,valueTwo:10,op:div)
+//2
+print(resultDivide)
+
+
+
+```
+
+- Aqui estou atribuindo uma função a uma constante, isto permite reduzir bastante código
+
+
+```swift
+func sum (valueOne: Int, valueTwo: Int) -> Int {
+	 return valueOne + valueTwo
+}
+
+func multi (valueOne: Int, valueTwo: Int) -> Int {
+	 return valueOne * valueTwo
+}
+
+func div (valueOne: Int, valueTwo: Int) -> Int {
+	 return valueOne / valueTwo
+}
+
+
+typealias Op = (Int,Int) -> Int
+
+
+func getOperation(_ operation:String) -> Op {
+	switch operation {
+	case "multiplicacao":
+		return multi
+	case "divisao":
+		return div
+	default:
+		return sum
+	}
+}
+
+var whatOperationDefault = getOperation("dfd")
+var value = whatOperationDefault(4,2)
+//6
+print(value)
+
+let whatOperationDiv = getOperation("divisao")
+value = whatOperationDiv(4,2)
+//2
+print(value)
+
+
+let whatOperationMulti = getOperation("multiplicacao")
+value = whatOperationMulti(4,2)
+//8
+print(value)
+
+```
+
+
+- Também aprendi a passagem de vários argumentos a uma função usando range
+
+
+```swift
+//com essa abordagem ele literamente espera um array
+func transformUpercase (_ names: [String]) -> [String] {
+	return names.map({$0.uppercased()})
+}
+
+
+let names = transformUpercase(["Ricardo","Joao","Pedro"])
+print(names)
+
+
+//com essa abordagem esperara um range
+func transformUpercase (_ names: String...) -> [String] {
+	return names.map({$0.uppercased()})
+}
+
+let names2 = transformUpercase("Ricardo","Pedro","Joao","Rafael")
+print(names2)
+
+```
 
 
 
