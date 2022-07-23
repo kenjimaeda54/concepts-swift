@@ -131,6 +131,51 @@ class Penquin: Bird {
 
 ```
 
+- Encapsulamento seu objetivo e proteger funcionalidades que fazem sentido não serem modicadas fora da classe
+- Para alcançar esse objetivo com swift protegemos suas propriedades usando public ou open,file private ou private
+- Open e public permite que entidades sejam usadas dentro de qualquer arquivo no seu modulo e tambem de um arquivo de outro módulo e inclusive importe naquele modulo
+- Internal permite que entidades sejam usadas dentro de qualquer arquivo do seu próprio modulo, mas não em arquivos de módulos de fora. E o padrão
+- Private restringe o uso de uma entidade somente dentro da sua própria declaração e a extensões daquela declaração que estejam no mesmo arquivo
+- Para proteger métodos usamos a palavra reservada final, neste caso mesmo que ocorra herança não poderemos manipular essa função
+
+
+```swift
+class CreditCard {
+	let number: String
+	let limit: Double
+	private var invoceValue: Double = 0
+	
+	init(number:String,limit:Double){
+		self.number = number
+		self.limit = limit
+	}
+	
+	
+	final func makePuchase(off value: Double, isInternational: Bool) -> Bool {
+		let debit = isInternational ? value * 6.38/100 : value
+		if debit > limit {
+			return false
+		}
+		invoceValue = limit - debit
+		return true
+	}
+	
+	//so consigo invocar para consultar o invoceValue, mas não consigo manipular 
+	var invoce: Double {
+		return invoceValue
+	}
+	
+}
+
+let creditCard = CreditCard(number: "120304", limit: 1000)
+print(creditCard.makePuchase(off: 100, isInternational: true))
+
+print(creditCard.invoce)
+//993.62
+
+```
+
+
 ## 
 - Protocolos , sao parecidos com interfaces caso inferir um protocol preciso implementar seus metodos ou propriedades
 - Protocols podem ser usados em struct e classes
