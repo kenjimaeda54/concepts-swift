@@ -95,7 +95,8 @@ print(City.speed)
 - Essa clase herda tudos métodos e propriedades  da super classe
 - Para sobrescrever um valor de método da super classe usamos o nome override
 - Caso desejamos o método que possui na super classe usamos a palavra reservada super
-
+- Classe possui recursos identeico struct: observadores de variáveis, membros e métodos estáticos, variáveis computadas
+- Para métodos estáticos usamos a palavra reservada class e não static, propriedade  mesma logica
 
 ```swift
 class Bird {
