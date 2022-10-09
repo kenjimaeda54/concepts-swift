@@ -770,5 +770,68 @@ func  ‼️ (left: Int, right: Int) -> [Int] {
 print( 30‼️10 )
 
 ```
+##
+- Aprendi subscript e generics
+- Com subscript consigo criar minhas próprias funcionalidades
+- Com generics posso generalizar a tipagem, assim possibilita qualquer tipo para minha função
+- Aprendi a manipular também as propriedades que vem nas funções, os argumentos precisam receber a letra &
+- Apos converter em um array nossa propreidade, precisamos converter para string
+- Eu criei um subscript para conseguir acessar a classe por índice, car[3]
+- Com set eu possibilitei a manipulação desse indicie
+
+```swift
+import Foundation
+
+
+class Car  {
+	var plaque: String
+
+	subscript(index: Int) -> String {
+		get {
+				
+			        var caracter = Array(plaque)
+				return String(caracter[index])
+			}
+			
+		set {
+				var array = Array(plaque)
+				array[index] = Character(newValue)
+				plaque = String(array)
+		}
+	}
+	
+	init(_ plaque: String) {
+		self.plaque = plaque
+	}
+	
+	
+}
+
+let car = Car("123232")
+car[3] = "A"
+print(car.plaque)
+
+
+func swapValue<T>(_ a: inout T,_ b: inout T)  {
+	var temp = a
+	a = b
+	b = temp
+}
+
+var a = 10
+var b = 20
+
+//os argumetnos precisam da letra reservada &
+swapValue(&a,&b)
+
+print("a agora moudou para",a)
+//a agora moudou para 20
+
+print("b agora mudou para", b)
+//b agora mudou para 10
+
+
+```
+
 
 
