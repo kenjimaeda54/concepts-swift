@@ -833,5 +833,96 @@ print("b agora mudou para", b)
 
 ```
 
+##
+- Getter e setter
+- Swift disponibiliza variáveis computadas e getter, setter
+- Variáveis computadas e uma maneira reduzida de escrever getter
+- Com essa técnica reduzido algumas linhas de código, por exemplo, atribuir novo valor a uma variável sem precisar criar logica de função
+- Com setter consigo atribuir um novo valor a nossa variável computada 
+- Para funcionar corretamente precisa ser declarada como var e possuir de forma implícita seu tipo
+
+```swift
+import Foundation
+
+
+var people = 4
+
+
+var numberPizza: Int  {
+	return people * 2
+}
+
+print(numberPizza)
+
+ 
+
+var costPizza: Int {
+	get {
+		return numberPizza * 20
+	}
+}
+
+
+
+var pizza = 0
+var  newNumberPizza: Int {
+	get {
+		return pizza
+	}
+	set {
+		 pizza = newValue + 20
+	}
+}
+
+newNumberPizza = 20
+
+//vai printar 40
+//20 do valor setado mais 20 da logica do setter
+print(newNumberPizza)
+```
+
+
+##
+- Observed 
+- Com essa técnica consigo monitorar uma variável e criar algumas lógicas com ele
+- Possui duas propriedades didSet e willSet
+- Com didSet tenho acesso ao oldValue e com willSet tenho acesso a newValue
+
+
+
+```swift
+import Foundation
+
+var pizzaInChes: Int = 10 {
+	didSet {
+		print(oldValue, "oldValue")
+	}
+	willSet {
+		print(newValue, "newValue")
+	}
+}
+
+pizzaInChes = 12
+
+var custPizza: Int = 12 {
+     didSet {
+	if custPizza >= 120 {
+	   print("Cant buy pizza more than 120")
+	custPizza = 12
+	 }
+   }
+}
+
+custPizza = 121
+print(custPizza)
+//ira printar Cant buy pizza more than 120
+//12, inibindo eu aumentar mais que 120
+
+```
+
+
+
+
+
 
 
