@@ -920,7 +920,32 @@ print(custPizza)
 
 ```
 
+##
+- Aprendi o uso de guard let
+- Normalmente quando precisamos verificar uma condicao se e verdadeiro usariamos guard e let,quando desejo desebrulhar algo if e else
 
+
+
+```swift
+
+import Foundation
+
+//voce pode usar varios guard let product = phone[id],carr[id] else {return error}
+func getPhone(_ id: Int)  -> String {
+	let phone = [
+		1: "iphone",
+		2: "sansug",
+		3: "pera",
+	]
+
+	
+	 
+ 	guard let product = phone[id]  else {return "Dont have phone"}
+	return product
+
+}
+
+```
 
 
 
