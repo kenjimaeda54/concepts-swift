@@ -17,5 +17,6 @@
         <page name='playground'/>
         <page name='getter-setter'/>
         <page name='observed-properties'/>
+        <page name='guard-let'/>
     </pages>
 </playground>

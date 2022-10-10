@@ -13,6 +13,7 @@ var numberPizza: Int  {
 
 print(numberPizza)
 
+ 
 
 var costPizza: Int {
 	get {
@@ -20,7 +21,6 @@ var costPizza: Int {
 	}
 }
 
-print(costPizza)
 
 //com setter consigo alterar minhas variaveis computadas
 
