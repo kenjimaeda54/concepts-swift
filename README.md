@@ -775,6 +775,7 @@ print( 30‼️10 )
 - Com subscript consigo criar minhas próprias funcionalidades
 - Com generics posso generalizar a tipagem, assim possibilita qualquer tipo para minha função
 - Aprendi a manipular também as propriedades que vem nas funções, os argumentos precisam receber a letra &
+- Dentro da função precisamos da palavra inout e assim que alteramos um valor passado nas funções
 - Apos converter em um array nossa propreidade, precisamos converter para string
 - Eu criei um subscript para conseguir acessar a classe por índice, car[3]
 - Com set eu possibilitei a manipulação desse indicie
